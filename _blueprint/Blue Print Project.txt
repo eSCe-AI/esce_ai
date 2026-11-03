@@ -1,0 +1,163 @@
+================================================================================
+                            BLUEPRINT PROJECT
+           eSCe AI ($ESCE - AI Trading Companion & Autonomous Agent)
+================================================================================
+
+--------------------------------------------------------------------------------
+
+[1. INFORMASI PROYEK & VISI STRATEGIS]
+
+Nama Produk            : eSCe AI
+Ticker Token           : $ESCE (Token utilitas ekosistem)
+Nama Domain & Folder   : esceai (huruf kecil semua)
+Ekosistem Utama        : Solana (Solana-First Approach)
+Visi Utama             : Membangun platform kecerdasan buatan (AI Agent) berbasis
+                         Solana yang bertindak sebagai mitra analitis, evaluator
+                         psikologi trading, dan pengelola risiko, serta didukung
+                         oleh utilitas token $ESCE untuk eksekusi perdagangan
+                         otonom (autonomous execution).
+
+PENDEKATAN BERBASIS MILESTONE (SOLANA-FIRST APPROACH):
+
+Tahap 1 (MVP & Web3 Identity):
+Integrasi dompet Solana (@solana/wallet-adapter) untuk otentikasi, pembacaan
+riwayat transaksi on-chain, agen AI untuk diskusi pengambilan keputusan berdasarkan
+riwayat trading dan pengenalan utilitas token $ESCE bagi investor dan early adopter.
+
+Tahap 2 (Smart Analytics & Ecosystem Integration):
+Pemindaian sentimen pasar Solana secara real-time, integrasi data
+portofolio mendalam, dan mekanisme utilitas $ESCE (seperti staking atau pembukaan
+fitur AI tingkat lanjut).
+
+Tahap 3 (Autonomous Agent & DEX Execution):
+Agen AI otonom yang mengeksekusi perdagangan kecepatan tinggi di protokol DEX
+Solana (seperti Jupiter Aggregator atau Raydium) dengan pengaman risiko
+(Risk Guard) berbasis smart contract.
+
+--------------------------------------------------------------------------------
+
+[2. RINCIAN FITUR BERDASARKAN TAHAPAN]
+
+A. TAHAP 1: MVP, ON-CHAIN IDENTITY & TOKEN UTILITY ($ESCE)
+   * Solana Wallet Connection: Masuk/Login menggunakan dompet Solana (Phantom/
+     Solflare) sebagai identitas utama pengguna (Sign-In with Solana).
+   * On-Chain Data Parsing & Analytics: Membaca riwayat transaksi dompet atau
+     data yang diunggah untuk menghitung metrik statistik presisi (Win Rate,
+     Risk-to-Reward Ratio, Maximum Drawdown).
+   * Deteksi Pola Emosi & Perilaku: Mengidentifikasi kebiasaan buruk trader
+     (overtrading, revenge trading, melanggar stop-loss).
+   * $ESCE Token Utility Integration: Memperkenalkan token $ESCE sebagai kunci
+     akses (token-gated access) untuk fitur analisis AI lanjutan (penting untuk
+     pitching investor).
+   * Conversational AI Partner: Antarmuka obrolan interaktif berkarakter mentor
+     manajemen risiko yang objektif.
+
+B. TAHAP 2: MARKET SENTIMENT & ECOSYSTEM EXPANSION
+   * Market Narrative & Sentiment Scanner: Memindai tren, sentimen, dan
+     volatilitas ekosistem Solana secara eksternal.
+   * Contextual Risk Advice: Menggabungkan analisis psikologi pengguna dengan
+     kondisi pasar real-time untuk memberikan rekomendasi position sizing akurat.
+   * Tokenomics & Governance: Memperluas utilitas $ESCE untuk tata kelola
+     komunitas atau program insentif kedisiplinan trading.
+
+C. TAHAP 3: EKSEKUSI OTONOM (AUTONOMOUS TRADING)
+   * Automated DEX Execution: Integrasi penuh dengan likuiditas Solana (Jupiter
+     Swap API) untuk eksekusi order otomatis.
+   * Smart Contract Risk Guard: Protokol pengaman otomatis berbasis smart contract
+     (Anchor Framework) untuk memastikan batasan risiko harian pengguna tidak
+     dilanggar oleh AI.
+
+--------------------------------------------------------------------------------
+
+[3. TECH STACK & ARSITEKTUR SISTEM (esceai)]
+
+Struktur Direktori Folder:
+
+/esceai
+├── /frontend      (Next.js / React.js dengan Tailwind CSS & Shadcn UI)
+├── /backend       (Python / FastAPI / Pandas untuk kalkulasi statistik presisi)
+└── /contracts     (Solana / Anchor untuk Risk Guard & Token Smart Contract)
+
+Komponen Teknologi:
+- Frontend & Web3 Layer : Next.js, @solana/wallet-adapter, @solana/web3.js, Tailwind CSS
+- Backend Engine        : Python FastAPI, Pandas/NumPy (Anti-halusinasi angka)
+- AI Core (LLM API)     : OpenAI API / Claude API (System Prompt Mentor Keuangan)
+- Blockchain Layer      : Solana Devnet/Mainnet, Anchor Framework, Jupiter Swap API
+
+--------------------------------------------------------------------------------
+
+[4. RENCANA KERJA IMPLEMENTASI (DEVELOPMENT WORKFLOW)]
+
+1. Fase 1 (MVP & Pitch Ready):
+   - Inisialisasi struktur direktori 'esceai'.
+   - Integrasi wallet Solana di Next.js (Sign-In with Solana).
+   - Pembuatan backend FastAPI untuk kalkulasi statistik transaksi.
+   - Integrasi LLM API serta logika akses token $ESCE untuk demo investor.
+
+2. Fase 2 (Market & Ecosystem):
+   - Menambahkan modul pemindaian sentimen pasar Solana.
+   - Memperkuat integrasi tokenomics & staking $ESCE.
+
+3. Fase 3 (Autonomous Agent):
+   - Mengembangkan modul Smart Contract Risk Guard via Anchor Framework.
+   - Eksekusi order otomatis via Jupiter API di jaringan Solana.
+
+--------------------------------------------------------------------------------
+
+[5. RENCANA LANDING PAGE]
+
+PUBLIK:
+   1. Home
+   2. User Guide
+
+APLIKASI:
+   3. Dashboard
+   4. Trading Analytics
+   5. AI Companion
+
+
+
+================================================================================
+                            ROAD MAP PENGEMBANGAN
+================================================================================
+
+┌────────────────────────────────────────────────────────────────────────┐
+│                        FRONTEND & HOSTING LAYER                        │
+│                Next.js (React) + Tailwind CSS + Vercel                 │
+└──────────────────────────────────┬─────────────────────────────────────┘
+                                   │
+                                   ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│                        API & AUTHENTICATION LAYER                      │
+│            Next.js API Routes + Solana Wallet Adapter (SDK)            │
+└──────────────────┬───────────────────────────────┬─────────────────────┘
+                   │                               │
+                   ▼                               ▼
+┌──────────────────────────────────────┐ ┌───────────────────────────────┐
+│            DATABASE LAYER            │ │       AI ENGINE LAYER         │
+│     Supabase (Managed PostgreSQL)    │ │  Python (FastAPI / PyTorch)   │
+└──────────────────────────────────────┘ └───────────────┬───────────────┘
+                                                         │
+                                                         ▼
+                                         ┌───────────────────────────────┐
+                                         │       BLOCKCHAIN & DATA       │
+                                         │   Helius RPC + Pyth/Binance   │
+                                         └───────────────────────────────┘
+--------------------------------------------------------------------------------
+
+📅 Roadmap Singkat Eksekusi (Tahap 1)
+
+Fase Inisiasi (Minggu 1-2):
+   1. Buat email proyek & repositori GitHub.
+   2. Setup proyek Next.js dasar di VS Code.
+   3. Hubungkan repositori GitHub ke Vercel hingga tautan live demo aktif.
+
+Fase Integrasi Data & DB (Minggu 3–4):
+   4. Buat instance Supabase gratis.
+   5. Pasang tombol Connect Wallet Solana di Next.js.
+   6. Tautkan Helius RPC untuk membaca riwayat saldo/transaksi dompet.
+
+Fase Integrasi AI & Peluncuran (Minggu 4+):
+   7. Hubungkan backend Python dengan Supabase.
+   8. Rilis modul analitik portofolio & skor risiko AI di dasbor Vercel.
+   9. Rilis halaman pengumuman token (esce.ai/token) secara simultan di X.

@@ -1,0 +1,27 @@
+esce_ai/
+│
+├── backend/                   # Python FastAPI & Pandas (Analytics Engine)
+│   ├── app/
+│   │   ├── api/               # Endpoint router (Analisis, Chat AI, Wallet data)
+│   │   ├── core/              # Konfigurasi & LLM integration (OpenAI/Claude)
+│   │   ├── services/          # Logika matematika trading (Pandas / Statistik)
+│   │   └── main.py            # Titik masuk utama FastAPI
+│   ├── requirements.txt       # Daftar pustaka Python (fastapi, pandas, dll.)
+│   └── Dockerfile             # Konfigurasi container
+│
+├── contracts/                 # Solana / Anchor (Smart Contract & Risk Guard)
+│   ├── programs/
+│   │   └── yurf_guard/        # Kode Rust untuk Smart Contract Risk Guard & Token $YRF
+│   ├── tests/                 # Skrip pengujian kontrak (TypeScript)
+│   ├── Anchor.toml            # Konfigurasi deployment Solana (Devnet/Mainnet)
+│   └── Cargo.toml             # Konfigurasi dependencies Rust
+│
+├── frontend/                  # Next.js (Frontend & Web3 UI)
+│   ├── app/                   # App Router Next.js (Halaman, Dashboard, Chat)
+│   ├── components/            # Komponen modular (WalletButton, Navbar, Chart)
+│   ├── context/               # State management untuk Solana Wallet & Token $YRF
+│   ├── public/                # Aset statis (Logo, Icon)
+│   ├── package.json           # Dependencies Frontend
+│   └── tailwind.config.js     # Konfigurasi Tailwind CSS
+│
+└── README.md                  # Dokumentasi & Deskripsi Proyek untuk Investor
