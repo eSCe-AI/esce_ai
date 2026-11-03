@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "YuRF AI - Solana Trading Companion",
-  description: "AI-driven trading companion and autonomous agent on Solana ($YRF)",
+  title: "eSCe AI - Trading Companion",
+  description: "AI trading companion and autonomous agent",
 };
 
 export default function RootLayout({
