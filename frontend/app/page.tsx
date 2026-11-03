@@ -217,11 +217,9 @@ export default function Home() {
         </div>
       </footer>
 
-{/* ========================================================= */}
-      {/* 6. AI CHATBOT FRONTEND WIDGET                              */}
-      {/* ========================================================= */}
-
-      {/* Toggle Button (Gelembung Chat Melayang - Dinaikkan ke bottom-16 agar aman dari badge Netlify) */}
+  
+      {/* 6. AI CHATBOT FRONTEND WIDGET           */}
+      {/* Toggle Button (Gelembung Chat Melayang) */}
       <div className="fixed bottom-16 right-6 z-50">
         <button
           onClick={() => setIsChatOpen(!isChatOpen)}
@@ -231,7 +229,7 @@ export default function Home() {
         </button>
       </div>
 
-      {/* Jendela Chat Modal (Dinaikkan juga posisinya ke bottom-32) */}
+      {/* Jendela Chat Modal */}
       {isChatOpen && (
         <div className="fixed bottom-32 right-6 w-96 max-w-[calc(100vw-3rem)] h-[500px] bg-gray-900 border border-blue-900/50 rounded-2xl shadow-2xl z-50 flex flex-col overflow-hidden backdrop-blur-xl">
           
