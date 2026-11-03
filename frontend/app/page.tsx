@@ -217,12 +217,12 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* ========================================================= */}
+{/* ========================================================= */}
       {/* 6. AI CHATBOT FRONTEND WIDGET                              */}
       {/* ========================================================= */}
 
-      {/* Toggle Button (Gelembung Chat Melayang) */}
-      <div className="fixed bottom-6 right-6 z-50">
+      {/* Toggle Button (Gelembung Chat Melayang - Dinaikkan ke bottom-16 agar aman dari badge Netlify) */}
+      <div className="fixed bottom-16 right-6 z-50">
         <button
           onClick={() => setIsChatOpen(!isChatOpen)}
           className="bg-blue-600 hover:bg-blue-500 text-white p-4 rounded-full shadow-2xl shadow-blue-600/50 flex items-center justify-center transition-all transform hover:scale-105"
@@ -231,9 +231,9 @@ export default function Home() {
         </button>
       </div>
 
-      {/* Jendela Chat Modal */}
+      {/* Jendela Chat Modal (Dinaikkan juga posisinya ke bottom-32) */}
       {isChatOpen && (
-        <div className="fixed bottom-24 right-6 w-96 max-w-[calc(100vw-3rem)] h-[500px] bg-gray-900 border border-blue-900/50 rounded-2xl shadow-2xl z-50 flex flex-col overflow-hidden backdrop-blur-xl">
+        <div className="fixed bottom-32 right-6 w-96 max-w-[calc(100vw-3rem)] h-[500px] bg-gray-900 border border-blue-900/50 rounded-2xl shadow-2xl z-50 flex flex-col overflow-hidden backdrop-blur-xl">
           
           {/* Header Chat */}
           <div className="p-4 bg-gray-950 border-b border-gray-800 flex items-center justify-between">
